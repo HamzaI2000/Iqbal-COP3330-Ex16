@@ -1,23 +1,27 @@
-# Compiled class file
-*.class
+/*
+ *  UCF COP3330 Fall 2021 Assignment 16 Solution
+ *  Copyright 2021 Hamza Iqbal
+ */
+ 
+import java.util.*;
+public class Main
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+{
+        public static void main(String[] args) {
+            Scanner s=new Scanner(System.in);
+            System.out.print("What is your age? ");
+            int age=s.nextInt();
+            
+            if(age<0)
+                System.out.println("Enter your age");
+            else
+            {
+               //used ternary operator and using lookup Table 
+                String country[]={"Algeria","Canada","Africa","Mexico", "Iran"};
+                int valid_age[]= {18,16,17,15,18};
+            
+                for(int i=0;i<5;i++)
+                    System.out.println( age>=valid_age[i] ? "Yoar are certaunly old enough to legally drive in " + country[i] : "Yoar are certainly not old enough to legally drive " +country[i]);
+            }
+        }
+}
